@@ -4,13 +4,13 @@ header {
     height: 10vh;
 }
 
-header::before {
+.imagem {
     content: "";
     position: absolute;
     background-color: whitesmoke;
-    background-image: url("../images/Background.png");
     background-size: cover;
-    min-height: 100px;
+    background-image: url("../images/Background.png");
+    height: 45vh;
     width: 100vw;
     display: block;
     z-index: -10;
@@ -38,4 +38,44 @@ h3 {
 #texto-apresentacao{
     color: #08415c;
     font-size: 2.25rem;
+}
+
+#secao-projetos {
+    height: 100vh;
+    background-color: #252937;
+}
+
+#secao-projetos ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    height: 100%;
+}
+
+.card {
+    max-height: 420px;
+    max-width: 300px;
+    position: relative;
+}
+
+.card .image{
+    height: 100%;
+    width: 100%;
+}
+
+.image img {
+    height: 100%;
+    width: 100%;
+}
+
+.card .texto {
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    color: white;
+    transition: opacity .5s;
+}
+
+.card:hover .texto {
+    opacity: 1;
 }
